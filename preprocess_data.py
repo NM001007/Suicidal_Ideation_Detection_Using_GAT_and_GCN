@@ -51,7 +51,7 @@ def preprocessing(data_frame):
 def read_twitter_10000(length = -1):
     ## Preparing the data
     ## Twitter 10000
-    Twitter_path = "./Datasets/Twitter/twitter-suicidal_data_10000.csv"
+    Twitter_path = "./Datasets/twitter-suicidal_data_10000.csv"
     if length > 0:
         df = pd.read_csv(Twitter_path, encoding='latin-1', nrows = length)
     elif length == -1:
@@ -65,7 +65,7 @@ def read_twitter_10000(length = -1):
     return df
 
 def read_twitter_tendency(length = -1):
-    twitter_path = "./Datasets/Twitter/suicidal-tendency-tweets.csv"  ## positive samples
+    twitter_path = "./Datasets/suicidal-tendency-tweets.csv"  ## positive samples
     if length > 0:
         df = pd.read_csv(twitter_path, encoding='latin-1', usecols=['tweet', 'intention'], nrows=length)
     elif length == -1:
@@ -80,7 +80,7 @@ def read_twitter_tendency(length = -1):
 
 def read_reddit_SNS(length = -1):
     ## Preparing the data
-    Reddit_path = "./Datasets/Reddit/Suicide_Detection.csv"
+    Reddit_path = "./Datasets/Suicide_Detection.csv"
     if length > 0:
         df = pd.read_csv(Reddit_path, encoding='latin-1', usecols=['text', 'class'], nrows=length)
     elif length == -1:
@@ -98,7 +98,7 @@ def read_reddit_SNS(length = -1):
 
 def read_reddit_SD(length = -1):
     ## Preparing the data
-    reddit_path = "./Datasets/Reddit/reddit_depression_suicidewatch.csv"
+    reddit_path = "./Datasets/reddit_depression_suicidewatch.csv"
     if length >0:
         df = pd.read_csv(reddit_path, encoding='latin-1', nrows=length)
     elif length == -1:
